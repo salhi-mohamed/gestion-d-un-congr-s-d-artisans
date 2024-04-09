@@ -17,8 +17,9 @@ class evaluation
      int getId();
      int getPoints();
      string getDate_evalution();
-     void evaluer(int);
+    // void evaluer(int);
      void editerEvaluation();
+     void afficher_evaluation();
 };
 
 #endif // EVALUATION_H_INCLUDED

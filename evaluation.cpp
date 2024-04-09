@@ -29,7 +29,49 @@ void evaluation::setPoints(int point)
 {
     points=point;
 }
-int evaluation::getid()
+int evaluation::getId()
 {
     return id_evaluation;
 }
+int evaluation::getPoints()
+{
+    return points;
+}
+string evaluation::getDate_evalution()
+{
+    return date_evaluation;
+}
+void evaluation::editerEvaluation()
+{
+    char rep,rep2;
+    do
+    {
+
+        cout<<"Que voulez-vous modifiez ? P : points , D : Date de l'evaluation : "<<endl;
+        cin>>rep;
+        switch(rep)
+        {
+            case 'P' :
+              cout<<"saisir le nouveau nombre des points : "<<endl;
+              cin>>points;
+              break;
+            case 'D' :
+                cout<<"saisir la nouvelle date de l'evaluation : "<<endl;
+                cin>>date_evaluation;
+                break;
+            default :
+               cout<<"Reponse invalide !"<<endl;
+               break;
+
+        }
+        cout<<"Voulez-vous encore modifiez ? O : oui , N : non : "<<endl;
+        cin>>rep2;
+    }
+    while(rep2!='N');
+
+}
+void evaluation :: afficher_evaluation()
+{
+    cout<<"ID evaluation : "<<id_evaluation<<"points : "<<points<<"Date de l evaluation : "<<date_evaluation<<endl;
+}
+

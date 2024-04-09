@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="Respensable.cpp" />
 		<Unit filename="Respensable.h" />
+		<Unit filename="employe.h" />
 		<Unit filename="evaluation.cpp" />
 		<Unit filename="evaluation.h" />
 		<Unit filename="main.cpp" />
@@ -42,6 +43,7 @@
 		<Unit filename="remarques" />
 		<Unit filename="stand.cpp" />
 		<Unit filename="stand.h" />
+		<Unit filename="tst" />
 		<Extensions>
 			<code_completion />
 			<debugger />

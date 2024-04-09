@@ -4,6 +4,27 @@
 using namespace std;
 personne::personne()
 {
+    int nblg;
+    cout<<"saisir le numero de cin : "<<endl;
+    cin>>Cin;
+    cout<<"saisir le nom : "<<endl;
+    cin>>nom;
+    cout<<"saisir le prenom : "<<endl;
+    cin>>prenom;
+    cout<<"saisir le num de telephone : "<<endl;
+    cin>>tel;
+    cout<<"saisir l email : "<<endl;
+    cin>>email;
+    cout<<"saisir l adresse : "<<endl;
+    cin>>adresse;
+    cout<<"saisir le nombre de de langues :  "<<endl;
+    cin>>nblg;
+    for(int i=0;i<nblg;i++)
+    {
+        string langue;
+        cout<<"saisir la langue numero : "<<i+1<<endl;
+        std::cin>>langue;
+        langues.push_back(langue);}
 
 }
 personne::personne(int c,string n,string p ,int t ,string e,string a)
@@ -36,10 +57,10 @@ personne::personne(const personne &p)
     tel=p.tel;
     email=p.email;
     adresse=p.adresse;
-    for(int i=0;i<langues.size();i++)
+    for(int i=0;i<p.langues.size();i++)
     {
         string langue;
-        langue=langues[i];
+        langue=p.langues[i];
         langues.push_back(langue);
     }
 }/*personne::~personne()
@@ -50,7 +71,7 @@ personne::personne(const personne &p)
     }
     langues.clear();
 }*/
-int personne::getcin()
+/*int personne::getcin()
 {
     cout<<"le numéro de cin de ce personne est : "<<endl;
     return Cin;
@@ -112,7 +133,7 @@ void personne::setadresse(string adresse )
 {
     this->adresse=adresse;
 }
-/*void personne::saisirlangues()
+void personne::saisirlangues()
 {
     int nblg;
     cout<<"saisir le nombre de de langues :  "<<endl;
@@ -122,9 +143,9 @@ void personne::setadresse(string adresse )
         string langue;
         cout<<"saisir la langue numero : "<<i+1<<endl;
         std::cin>>langue;
-        langues.push_back(langue);}}
-*/
-void personne::afficherPersonne()
+        langues.push_back(langue);}}*/
+
+/*void personne::afficherPersonne()
 {
     cout<<"Affichage des informations relatives à ce personne : "<<endl;
     cout<<"Cin : "<<Cin<<endl;
@@ -135,8 +156,8 @@ void personne::afficherPersonne()
     cout<<"Adresse de résidence : "<<adresse<<endl;
     getlangues();
 
-}
-void personne::modifier()
+}*/
+/*void personne::modifier()
 {
     char rep,reponse;
     do
@@ -168,8 +189,8 @@ void personne::modifier()
 
     }
     while(reponse!='N');
-}
-void personne::ajouterLangue()
+}*/
+/*void personne::ajouterLangue()
 {
    int nb_langues;
   cout<<"combien de langues voulez-vous ajoutez ? "<<endl;
@@ -184,3 +205,9 @@ void personne::ajouterLangue()
 
 
 }
+void personne::supprimer_langue(int i )
+{
+    langues.erase(langues.begin()+i);
+    cout<<"suppression effectuée avec succées : "<<endl;
+}
+*/
