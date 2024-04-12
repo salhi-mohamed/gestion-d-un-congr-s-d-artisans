@@ -2,7 +2,7 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-personne::personne()
+/*personne::personne()
 {
     int nblg;
     cout<<"saisir le numero de cin : "<<endl;
@@ -211,3 +211,20 @@ void personne::supprimer_langue(int i )
     cout<<"suppression effectuée avec succées : "<<endl;
 }
 */
+complexe::complexe(float r,float  i )
+{
+
+    real=r;
+    im=i;
+}
+complexe complexe::additionner(complexe c)
+{
+    complexe *x;
+    x=new complexe(real+c.real,im+c.im);
+    return *x;
+
+}
+void complexe ::afficher()
+{
+    cout<<real<<" + "<<im<<"i "<<endl;
+}

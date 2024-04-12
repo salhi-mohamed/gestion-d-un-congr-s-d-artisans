@@ -15,32 +15,41 @@ class personne
       string email;
       string adresse;
       vector<string> langues;
-    //int nblangues; A vérifier
+      int nblangues; // A vérifier
     public :
-       personne();
-       personne(int,string,string,int,string,string);//a verifier concernant l'initialisation de l'attribut langues
-       personne(const personne &);
-      // ~personne();
-      virtual int getcin()=0; // methode qui retourne le num de cin de la personne
-       virtual string getnom()=0; //methode qui retourne le nom de la personne
-       virtual string getprenom()=0; // methode qui retourne le prenom de la personne
-       virtual int gettel()=0; //methode qui retourne le numero de telephone de la personne
-       virtual string getemail()=0; //methode qui retourne l email de la personne
-       virtual string getadresse()=0; //methode qui retourne l adresse de residence de la personne
-       virtual void getlangues()=0; //methode qui affiche les langues maitrisées par la personne
-       virtual void setcin(int)=0; //methode qui permet le saisie de num de cin de la personne
-       virtual void setnom(string)=0;//methode qui permet le saisie du nom de la personne
-       virtual void setprenom(string)=0;
-       virtual void settel(int)=0;
-       virtual void setemail(string)=0;
-       virtual void setadresse(string)=0;
-       virtual void afficherPersonne()=0;
-       //void supprimer();
-       virtual void modifier()=0;
-       virtual void saisirlangues()=0;
-       virtual void ajouterLangue()=0;
-       virtual void supprimer_langue(int )=0;
-       virtual void supprimer_session(int)=0;
+        personne();
+        personne(int,string,string,int,string,string);//a verifier concernant l'initialisation de l'attribut langues
+        personne(const personne &);
+       ~personne();
+        int getcin(); // methode qui retourne le num de cin de la personne
+        string getnom(); //methode qui retourne le nom de la personne
+        string getprenom(); // methode qui retourne le prenom de la personne
+        int gettel(); //methode qui retourne le numero de telephone de la personne
+        string getemail(); //methode qui retourne l email de la personne
+        string getadresse(); //methode qui retourne l adresse de residence de la personne
+        void getlangues(); //methode qui affiche les langues maitrisées par la personne
+        void setcin(int); //methode qui permet le saisie de num de cin de la personne
+        void setnom(string);//methode qui permet le saisie du nom de la personne
+        void setprenom(string);
+        void settel(int);
+        void setemail(string);
+        void setadresse(string);
+        virtual void afficherPersonne();
+        void supprimer();
+        virtual void modifier()=0;
+        virtual void saisirlangues()=0;
+        virtual void ajouterLangue()=0;
+        virtual void supprimer_langue(int )=0;
+        virtual void supprimer_session(int)=0;// a verifier
+
+};
+class complexe {
+    float real;
+    float im;
+    public :
+       complexe(float,float);
+       void afficher();
+       complexe additionner(complexe);
 
 };
 

@@ -76,8 +76,8 @@ int main()
     cin>>indice;
     r->supprimer_session(indice);
     r->afficherrespensable();*/
-    personne *p;
-    p=new respensable();
+    //personne *p;
+    //p=new respensable();
    /* p->getadresse();*/
    //cout<<p->getemail()<<endl;
    /* cout<<"********************"<<endl;
@@ -89,7 +89,7 @@ int main()
     p->afficherPersonne();
     cout<<"**********************************"<<endl;
     p->getlangues();*/
-    int indice ;
+   /* int indice ;
     p->modifier();
     p->afficherPersonne();
     cout<<"saisir un entier : "<<endl;
@@ -99,7 +99,11 @@ int main()
     //p->afficherPersonne();
     p->supprimer_session(indice-1);
     p->afficherPersonne();
-    cout<<"*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*"<<endl;
-    p->getlangues();
-
+    cout<<"*//*/*//*/*//*/*//*/*//*/*//*/*"<<endl;
+    p->getlangues();*/
+    complexe *cl,*c2,*c3;
+    cl=new complexe(2,2);
+    c3=new complexe(4,4);
+    *c2=cl->additionner(*c3);
+    c2->afficher();
 }

@@ -2,12 +2,12 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
 	<File name="Respensable.cpp" open="1" top="0" tabpos="8">
-		<Cursor position="3524" topLine="3" />
+		<Cursor position="3399" topLine="105" />
 	</File>
 	<File name="Respensable.h" open="1" top="0" tabpos="9">
-		<Cursor position="587" topLine="18" />
+		<Cursor position="1409" topLine="21" />
 	</File>
-	<File name="employe.h" open="1" top="1" tabpos="11">
+	<File name="employe.h" open="1" top="0" tabpos="11">
 		<Cursor position="98" topLine="0" />
 	</File>
 	<File name="evaluation.cpp" open="1" top="0" tabpos="7">
@@ -17,13 +17,13 @@
 		<Cursor position="241" topLine="6" />
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="3">
-		<Cursor position="2645" topLine="81" />
+		<Cursor position="2884" topLine="87" />
 	</File>
 	<File name="personne.cpp" open="1" top="0" tabpos="2">
 		<Cursor position="4924" topLine="78" />
 	</File>
-	<File name="personne.h" open="1" top="0" tabpos="1">
-		<Cursor position="944" topLine="27" />
+	<File name="personne.h" open="1" top="1" tabpos="1">
+		<Cursor position="1772" topLine="27" />
 	</File>
 	<File name="stand.cpp" open="1" top="0" tabpos="5">
 		<Cursor position="1207" topLine="43" />

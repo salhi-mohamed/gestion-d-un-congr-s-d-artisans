@@ -2,7 +2,7 @@
 #include<iostream>
 #include<string>
 #include<vector>
-using namespace std;
+/*using namespace std;
 respensable::respensable():personne()
 {
     int nbsessions;
@@ -143,7 +143,7 @@ void respensable::setrole(string role)
 }
 int respensable::getcin()
 {
-    cout<<"le numéro de cin de ce personne est : "<<endl;
+    //cout<<"le numéro de cin de ce personne est : "<<endl;
     return Cin;
 }
 string respensable::getnom()
@@ -233,5 +233,5 @@ void respensable::supprimer_langue(int i )
 {
     langues.erase(langues.begin()+i);
     cout<<"suppression effectuée avec succées : "<<endl;
-}
+}*/
 
