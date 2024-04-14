@@ -74,6 +74,8 @@ int main()
    cout<<*e;*/
  respensable *r;
  r=new respensable();
-  r->modifier();
-  cout<<*r;
-}
+  //r->modifier();
+  r->saisir_respensable();
+
+  r->supprimer_session();
+  cout<<*r;}

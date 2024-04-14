@@ -227,10 +227,36 @@ vector<int*> respensable::getsessions()
 void respensable::setrole(string role)
 {
     this->role=role;}
- void respensable::supprimer_session(int i)
-{
-    sessions.erase(sessions.begin()+i);
-    cout<<"suppression effectuée avec sucées "<<endl;
+void respensable::supprimer_session() {
+    // Vérifier si la liste des sessions est vide
+    if (sessions.empty()) {
+        cout << "La liste des sessions est vide. Aucune session à supprimer." << endl;
+        return;
+    }
+
+    // Afficher les sessions disponibles
+    cout << "Sessions disponibles :" << endl;
+    for (size_t i = 0; i < sessions.size(); ++i) {
+        cout << i + 1 << ". Session " << *sessions[i] << endl;
+    }
+
+    // Demander à l'utilisateur de saisir le numéro de la session à supprimer
+    int numero;
+    do {
+        cout << "Saisir le numéro de la session à supprimer : ";
+        cin >> numero;
+
+        // Vérifier si le numéro est valide
+        if (numero < 1 || numero > sessions.size()) {
+            cout << "Numéro de session invalide. Veuillez saisir un numéro valide." << endl;
+        }
+    } while (numero < 1 || numero > sessions.size()); // Répéter tant que l'indice est invalide
+
+    // Supprimer la session
+    delete sessions[numero - 1];
+    sessions.erase(sessions.begin() + numero - 1);
+
+    cout << "Session numéro " << numero << " supprimée avec succès." << endl;
 }
 void respensable::saisir_sessions(vector<int*> session)
 {

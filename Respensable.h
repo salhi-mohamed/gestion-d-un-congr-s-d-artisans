@@ -20,7 +20,7 @@ class respensable :public personne
     void setrole(string);
     void saisir_sessions(vector<int*>);
     void ajouter_session(int*);
-    void supprimer_session(int);
+    void supprimer_session();
     void afficherPersonne();
     void modifier();
     ~respensable();
