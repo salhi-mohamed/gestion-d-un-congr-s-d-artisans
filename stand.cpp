@@ -42,7 +42,7 @@ void stand::afficherStand()
     cout<<"l'identifiant de ce stand est : "<<id_stand<<endl;
     cout<<"l'emplacement de ce stand est : "<<emplacement<<endl;
 }
-void stand::editerStand()
+/*void stand::editerStand()
 {
     char reponse,rep;
     do
@@ -66,5 +66,47 @@ void stand::editerStand()
         cout<<"Voulez-vous encore modifier ? O : OUI , N: NON"<<endl;
         cin>>rep;
     }
-    while(rep!='N');
+    while((rep=='O')||(rep=='o'));
+}*/
+void stand::editerStand() {
+    char reponse;
+
+    do {
+        cout << "Que voulez-vous modifier pour ce stand ? I : Identifiant, E : Emplacement" << endl;
+        cin >> reponse;
+
+        switch (toupper(reponse)) {
+            case 'I':
+                cout << "Saisir le nouvel identifiant : ";
+                cin >> id_stand;
+                break;
+            case 'E':
+                cout << "Saisir le nouvel emplacement : ";
+                cin.ignore(); // Ignorer le caractère de nouvelle ligne restant dans le buffer
+                getline(cin, emplacement);
+                break;
+            default:
+                cout << "Réponse invalide !" << endl;
+                continue; // Revenir au début de la boucle pour redemander une réponse valide
+        }
+
+        do {
+            cout << "Voulez-vous encore modifier ? O : OUI, N : NON" << endl;
+            cin >> reponse;
+
+            if (toupper(reponse) != 'O' && toupper(reponse) != 'N') {
+                cout << "Réponse invalide !" << endl;
+            }
+        } while (toupper(reponse) != 'O' && toupper(reponse) != 'N');
+
+    } while (toupper(reponse) == 'O');
 }
+
+
+ostream& operator<<(ostream& o,const stand &s)
+{
+    o<<"Affichage des informations relatives à ce stand : "<<endl;
+    o<<"Identifiant du stand :"<<s.id_stand<<endl;
+    o<<"Emplacement du stand : "<<s.emplacement<<endl;
+}
+stand::~stand(){}

@@ -51,7 +51,7 @@ int main()
    p=new personne();
    p->saisir_personne();
    respensable* r = dynamic_cast<respensable*>(p);*/
-   respensable *r;
+   /*respensable *r;
    r=new respensable();
    r->saisir_respensable();
    r->afficherPersonne();
@@ -59,7 +59,21 @@ int main()
    r2=*r;
    cout<<"test"<<endl;
    r2.afficherPersonne();
-
-
-
+*/
+   /*personne *p;
+   p=new personne();
+   p->saisir_personne();
+   cout<<*p;*/
+  /* stand *s;
+   s=new stand();
+   s->saisir_stand();
+   cout<<*s;*/
+   /*evaluation *e;
+   e=new evaluation();
+   e->saisir_evaluation();
+   cout<<*e;*/
+ respensable *r;
+ r=new respensable();
+  r->modifier();
+  cout<<*r;
 }

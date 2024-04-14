@@ -14,12 +14,15 @@ class stand
      int getId();
      void  setEmplacement(string);
      void editerStand();
-     void supprimerStand();
+     //void supprimerStand();
      void afficherStand();
      string getEmplacement();
      void saisir_stand();
-
+     friend ostream& operator<<(ostream& ,const stand&);
+     ~stand();
 };
+
+
 
 
 #endif // STAND_H_INCLUDED

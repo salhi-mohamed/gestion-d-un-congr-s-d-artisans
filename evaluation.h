@@ -21,6 +21,8 @@ class evaluation
      void editerEvaluation();
      void afficher_evaluation();
      void saisir_evaluation();
+     friend ostream& operator<<(ostream&,const evaluation&);
+     ~evaluation();
 };
 
 #endif // EVALUATION_H_INCLUDED

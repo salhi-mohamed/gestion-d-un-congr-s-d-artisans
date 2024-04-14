@@ -181,39 +181,66 @@ void personne::afficherPersonne()
     getlangues();
 
 }
-void personne::modifier()
-{
-    char rep,reponse;
-    do
-    {
-        cout<<"Que voulez-vous modifiez ? T :numéro de téléphone , A : adresse de résidence , M : adresse mail  "<<endl;
-        cin>>rep;
-        switch(rep)
-        {
+ void personne::modifier() {
+    char reponse;
+
+    do {
+        cout << "Que voulez-vous modifier pour cette personne ?" << endl;
+        cout << "N : Nom, P : Prenom, T : Telephone, E : Email, A : Adresse" << endl;
+        cout << "L : Langues, Q : Quitter" << endl;
+        cin >> reponse;
+
+        switch (toupper(reponse)) {
+            case 'N':
+                cout << "Saisir le nouveau nom : ";
+                cin >> nom;
+                break;
+            case 'P':
+                cout << "Saisir le nouveau prénom : ";
+                cin >> prenom;
+                break;
             case 'T':
-              cout<<"saisir le nouveau numéro de telephone : "<<endl;
-              cin>>tel;
-            break;
+                cout << "Saisir le nouveau numéro de téléphone : ";
+                cin >> tel;
+                break;
+            case 'E':
+                cout << "Saisir le nouvel email : ";
+                cin >> email;
+                break;
             case 'A':
-             cout<<"saisir la nouvelle adresse de résidence : "<<endl;
-             cin>>adresse;
-             break;
-            case 'M':
-              cout<<"saisie la nouvelle adresse mail : "<<endl;
-              cin>>email;
-            break;
-            default :
-              cout<<"réponse invalide !"<<endl;
-              break;
-
-
+                cout << "Saisir la nouvelle adresse : ";
+                cin >> adresse;
+                break;
+            case 'L':
+                int nbLangues;
+                cout << "Combien de langues voulez-vous ajouter ? : ";
+                cin >> nbLangues;
+                for (int i = 0; i < nbLangues; ++i) {
+                    string langue;
+                    cout << "Saisir la langue " << i + 1 << " : ";
+                    cin >> langue;
+                    langues.push_back(langue);
+                }
+                break;
+            case 'Q':
+                return; // Quitter la méthode
+            default:
+                cout << "Réponse invalide !" << endl;
+                continue; // Revenir au début de la boucle pour redemander une réponse valide
         }
-        cout<<"voulez-vous modifiez encore ? , O : Oui , N : Non "<<endl;
-        cin>>reponse;
 
-    }
-    while(reponse!='N');
+        do {
+            cout << "Voulez-vous encore modifier ? O : OUI, N : NON" << endl;
+            cin >> reponse;
+
+            if (toupper(reponse) != 'O' && toupper(reponse) != 'N') {
+                cout << "Réponse invalide !" << endl;
+            }
+        } while (toupper(reponse) != 'O' && toupper(reponse) != 'N');
+
+    } while (toupper(reponse) == 'O');
 }
+
 void personne::ajouterLangue()
 {
    int nb_langues;
@@ -230,15 +257,53 @@ void personne::ajouterLangue()
 
 
 }
-void personne::supprimer_langue(int i )
-{
-    langues.erase(langues.begin()+i);
-    cout<<"suppression effectuée avec succées : "<<endl;     /* int Cin;
-      string nom;
-      string prenom;
-      int tel;
-      string email;
-      string adresse;*/
-      nblangues=nblangues-1;
+void personne::supprimer_langue() {
+    // Vérifier si la liste des langues est vide
+    if (langues.empty()) {
+        cout << "La liste des langues est vide." << endl;
+        return;
+    }
+
+    // Afficher les langues actuellement disponibles
+    cout << "Langues actuellement disponibles :" << endl;
+    for (size_t i = 0; i < langues.size(); ++i) {
+        cout << i + 1 << ". " << langues[i] << endl;
+    }
+
+    // Demander à l'utilisateur le numéro de la langue à supprimer
+    int choix;
+    cout << "Entrez le numéro de la langue à supprimer : ";
+    cin >> choix;
+
+    // Vérifier si le numéro est valide
+    if (choix < 1 || choix > langues.size()) {
+        cout << "Numéro invalide. Opération annulée." << endl;
+        return;
+    }
+
+    // Supprimer la langue sélectionnée
+    langues.erase(langues.begin() + choix - 1);
+
+    // Mettre à jour nblangues
+    nblangues = langues.size();
+
+    cout << "Langue supprimée avec succès." << endl;
 }
 
+
+ostream& operator<<(ostream& o,const personne &p)
+{
+    o<<"Affichage des informations relatives à ce personne : "<<endl;
+    o<<"Cin : "<<p.Cin<<endl;
+    o<<"Nom : "<<p.nom<<endl;
+    o<<"Prenom : "<<p.prenom<<endl;
+    o<<"Numéro de téléphone : "<<p.tel<<endl;
+    o<<"Adresse mail : "<<p.email<<endl;
+    o<<"Adresse de vie : "<<p.adresse<<endl;
+    o<<"Nombre de langues : "<<p.nblangues<<endl;
+    o<<"Les langues que ce personne maitrisent sont : "<<endl;
+    for(int i=0;i<(p.langues).size();i++)
+    {
+        o<<"Langue "<<i+1<<" : "<<p.langues[i]<<endl;
+    }
+}

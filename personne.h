@@ -3,6 +3,7 @@
 #include<iostream>
 #include<string>
 #include<vector>
+#include<iostream>
 using namespace std;
 
 class personne
@@ -38,8 +39,9 @@ class personne
         virtual void modifier();
          void saisirlangues();
          void ajouterLangue();
-         void supprimer_langue(int );
+         void supprimer_langue( );
          void saisir_personne();
+         friend ostream& operator<<(ostream&,const personne &);
 
 
 };

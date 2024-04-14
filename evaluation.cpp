@@ -47,7 +47,7 @@ string evaluation::getDate_evalution()
 }
 void evaluation::editerEvaluation()
 {
-    char rep,rep2;
+    /*char rep,rep2;
     do
     {
 
@@ -71,11 +71,54 @@ void evaluation::editerEvaluation()
         cout<<"Voulez-vous encore modifiez ? O : oui , N : non : "<<endl;
         cin>>rep2;
     }
-    while(rep2!='N');
+    while(rep2!='N');*/
 
+    char reponse;
+    do {
+        cout << "Que voulez-vous modifier pour cette évaluation ?" << endl;
+        cout << "P : Points, D : Date, Q : Quitter" << endl;
+        cin >> reponse;
+
+        switch (toupper(reponse)) {
+            case 'P':
+                cout << "Saisir le nouveau nombre de points : ";
+                cin >> points;
+                break;
+            case 'D':
+                cout << "Saisir la nouvelle date d'évaluation : ";
+                cin.ignore(); // Ignorer le caractère de nouvelle ligne restant dans le buffer
+                getline(cin, date_evaluation);
+                break;
+            case 'Q':
+                return; // Quitter la méthode
+            default:
+                cout << "Réponse invalide !" << endl;
+                continue; // Revenir au début de la boucle pour redemander une réponse valide
+        }
+
+        do {
+            cout << "Voulez-vous encore modifier ? O : OUI, N : NON" << endl;
+            cin >> reponse;
+
+            if (toupper(reponse) != 'O' && toupper(reponse) != 'N') {
+                cout << "Réponse invalide !" << endl;
+            }
+        } while (toupper(reponse) != 'O' && toupper(reponse) != 'N');
+
+    } while (toupper(reponse) == 'O');
 }
+
+
+
 void evaluation :: afficher_evaluation()
 {
     cout<<"ID evaluation : "<<id_evaluation<<"points : "<<points<<"Date de l evaluation : "<<date_evaluation<<endl;
 }
-
+ostream& operator<<(ostream& o,const evaluation &e)
+{
+    o<<"Affichage des informations relatives à cette evaluation : "<<endl;
+    o<<"Identifiant de l' evaluation :"<<e.id_evaluation<<endl;
+    o<<"Date de l'évaluation : "<<e.date_evaluation<<endl;
+    o<<"Points : "<<e.points<<endl;
+}
+evaluation::~evaluation(){}

@@ -26,7 +26,7 @@ class respensable :public personne
     ~respensable();
     respensable & operator=(const respensable &);
     void saisir_respensable();
-
+    friend ostream& operator<<(ostream&,respensable&);
 };
 
 #endif // RESPENSABLE_H_INCLUDED
