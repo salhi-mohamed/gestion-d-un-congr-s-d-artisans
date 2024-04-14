@@ -3,8 +3,28 @@
 #include<string>
 #include<vector>
 using namespace std;
-/*respensable::respensable():personne()
+respensable::respensable():personne()
 {
+   /* int nbsessions;
+
+    cout<<"saisir le role : "<<endl;
+    cin>>role;
+    cout<<"saisir le nombre de sessions : "<<endl;
+    cin>>nbsessions;
+    for(int i=0;i<nbsessions;i++)
+    {
+        int session;
+        cout<<"saisir la session numero "<<i+1<<endl;
+        cin>>session;
+        sessions.push_back(&session);
+    }
+
+*/
+}
+void respensable::saisir_respensable()
+
+{
+    personne::saisir_personne();
     int nbsessions;
 
     cout<<"saisir le role : "<<endl;
@@ -16,12 +36,9 @@ using namespace std;
         int session;
         cout<<"saisir la session numero "<<i+1<<endl;
         cin>>session;
-        sessions.push_back(session);
+        sessions.push_back(&session);
     }
-
-
-}*/
-respensable::respensable():personne(){}
+}
 respensable::respensable(string role,int c,string n,string p ,int t ,string e,string a,int nblg,vector<int*>sessions ):personne(c,n,p,t,e,a,nblg)
 {
     //int nbsessions;

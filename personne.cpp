@@ -5,7 +5,7 @@ using namespace std;
 personne::personne()
 {
 
-    /*cout<<"saisir le numero de cin : "<<endl;
+    /**cout<<"saisir le numero de cin : "<<endl;
     cin>>Cin;
     cout<<"saisir le nom : "<<endl;
     cin>>nom;
@@ -47,6 +47,29 @@ personne::personne(int c,string n,string p ,int t ,string e,string a,int nblg)
 
 
 
+}
+void personne::saisir_personne()
+{
+    cout<<"saisir le numero de cin : "<<endl;
+    cin>>Cin;
+    cout<<"saisir le nom : "<<endl;
+    cin>>nom;
+    cout<<"saisir le prenom : "<<endl;
+    cin>>prenom;
+    cout<<"saisir le num de telephone : "<<endl;
+    cin>>tel;
+    cout<<"saisir l email : "<<endl;
+    cin>>email;
+    cout<<"saisir l adresse : "<<endl;
+    cin>>adresse;
+    cout<<"saisir le nombre de de langues :  "<<endl;
+    cin>>nblangues;
+    for(int i=0;i<nblangues;i++)
+    {
+        string langue;
+        cout<<"saisir la langue numero : "<<i+1<<endl;
+        std::cin>>langue;
+        langues.push_back(langue);}
 }
 personne::personne(const personne &p)
 {

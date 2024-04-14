@@ -25,6 +25,7 @@ class respensable :public personne
     void modifier();
     ~respensable();
     respensable & operator=(const respensable &);
+    void saisir_respensable();
 
 };
 

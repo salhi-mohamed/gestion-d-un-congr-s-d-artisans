@@ -39,6 +39,7 @@ class personne
          void saisirlangues();
          void ajouterLangue();
          void supprimer_langue(int );
+         void saisir_personne();
 
 
 };

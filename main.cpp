@@ -11,7 +11,7 @@
 using namespace std;
 int main()
 {
-    int session1,session2;
+    /*int session1,session2;
     int *session1P,*session2P;
     respensable *r;
     vector<int*> tab;
@@ -39,9 +39,27 @@ int main()
    respensable r2=*r;
    cout<<"*****************"<<endl;
    //r2.afficherPersonne();*/
-   respensable r3;
+  /* respensable r3;
     r3=*r;
     cout<<"test de l affichage apres l appel de l'operateur = "<<endl;
-   r3.afficherPersonne();
+   r3.afficherPersonne();*/
+  /* personne *p;
+   p=new personne();
+   p->saisir_personne();
+   p->afficherPersonne();*/
+   /*personne *p;
+   p=new personne();
+   p->saisir_personne();
+   respensable* r = dynamic_cast<respensable*>(p);*/
+   respensable *r;
+   r=new respensable();
+   r->saisir_respensable();
+   r->afficherPersonne();
+   respensable r2;
+   r2=*r;
+   cout<<"test"<<endl;
+   r2.afficherPersonne();
+
+
 
 }
