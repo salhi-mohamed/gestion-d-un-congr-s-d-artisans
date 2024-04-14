@@ -20,6 +20,7 @@ class evaluation
     // void evaluer(int);
      void editerEvaluation();
      void afficher_evaluation();
+     void saisir_evaluation();
 };
 
 #endif // EVALUATION_H_INCLUDED

@@ -4,11 +4,15 @@
 using namespace std;
 stand::stand()
 {
+
+
+}
+void stand::saisir_stand()
+{
     cout<<"saisir l identifiant du stand : "<<endl;
     cin>>id_stand;
     cout<<"saisir l 'emplacement du stand : "<<endl;
     cin>>emplacement;
-
 }
 stand::stand(int id_stand,string emplacement)
 {

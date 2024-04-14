@@ -17,6 +17,7 @@ class stand
      void supprimerStand();
      void afficherStand();
      string getEmplacement();
+     void saisir_stand();
 
 };
 

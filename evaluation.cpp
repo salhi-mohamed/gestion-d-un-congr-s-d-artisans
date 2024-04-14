@@ -4,6 +4,10 @@
 using namespace std;
 evaluation::evaluation()
 {
+
+}
+void evaluation::saisir_evaluation()
+{
     cout<<"saisir l'id de l'evaluation : "<<endl;
     cin>>id_evaluation;
     cout<<"saisir la date de l'evaluation "<<endl;
