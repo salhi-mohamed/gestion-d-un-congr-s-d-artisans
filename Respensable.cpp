@@ -32,7 +32,7 @@ void respensable::saisir_respensable()
     cin>>nbsessions;
     for (int i = 0; i < nbsessions; i++) {
         int* session = new int; // Allouer dynamiquement un nouvel entier
-        cout << "Saisir la session numéro " << i+1 << " : ";
+        cout << "Saisir la session numï¿½ro " << i+1 << " : ";
         cin >> *session;
         sessions.push_back(session);
     }
@@ -87,16 +87,16 @@ void respensable::afficherPersonne()
     /*char rep,reponse;
     do
     {
-        cout<<"Que voulez-vous modifiez ? T :numéro de téléphone , A : adresse de résidence , M : adresse mail  , R : Role"<<endl;
+        cout<<"Que voulez-vous modifiez ? T :numï¿½ro de tï¿½lï¿½phone , A : adresse de rï¿½sidence , M : adresse mail  , R : Role"<<endl;
         cin>>rep;
         switch(rep)
         {
             case 'T':
-              cout<<"saisir le nouveau numéro de telephone : "<<endl;
+              cout<<"saisir le nouveau numï¿½ro de telephone : "<<endl;
               cin>>tel;
             break;
             case 'A':
-             cout<<"saisir la nouvelle adresse de résidence : "<<endl;
+             cout<<"saisir la nouvelle adresse de rï¿½sidence : "<<endl;
              cin>>adresse;
              break;
             case 'M':
@@ -108,7 +108,7 @@ void respensable::afficherPersonne()
               cin>>role;
               break;
             default :
-              cout<<"réponse invalide !"<<endl;
+              cout<<"rï¿½ponse invalide !"<<endl;
               break;
 
 
@@ -119,7 +119,7 @@ void respensable::afficherPersonne()
     }
     while(reponse!='N');*/
 void respensable::modifier() {
-    // Appeler d'abord la méthode modifier de la classe de base personne
+    // Appeler d'abord la mï¿½thode modifier de la classe de base personne
     personne::modifier();
 
     char reponse;
@@ -130,7 +130,7 @@ void respensable::modifier() {
 
         switch (toupper(reponse)) {
             case 'R':
-                cout << "Saisir le nouveau rôle : ";
+                cout << "Saisir le nouveau rï¿½le : ";
                 cin >> role;
                 break;
             case 'S': {
@@ -143,10 +143,10 @@ void respensable::modifier() {
                     switch (toupper(choix)) {
                         case 'A': {
                             int* session = new int;
-                            cout << "Saisir le numéro de la nouvelle session : ";
+                            cout << "Saisir le numï¿½ro de la nouvelle session : ";
                             cin >> *session;
                             sessions.push_back(session);
-                            cout << "Session ajoutée avec succès." << endl;
+                            cout << "Session ajoutï¿½e avec succï¿½s." << endl;
                             break;
                         }
                         case 'S': {
@@ -154,14 +154,14 @@ void respensable::modifier() {
                                 cout << "La liste des sessions est vide." << endl;
                             } else {
                                 int numero;
-                                cout << "Saisir le numéro de session à supprimer : ";
+                                cout << "Saisir le numï¿½ro de session ï¿½ supprimer : ";
                                 cin >> numero;
                                 if (numero >= 1 && numero <= sessions.size()) {
                                     delete sessions[numero - 1];
                                     sessions.erase(sessions.begin() + numero - 1);
-                                    cout << "Session supprimée avec succès." << endl;
+                                    cout << "Session supprimï¿½e avec succï¿½s." << endl;
                                 } else {
-                                    cout << "Numéro de session invalide." << endl;
+                                    cout << "Numï¿½ro de session invalide." << endl;
                                 }
                             }
                             break;
@@ -175,9 +175,9 @@ void respensable::modifier() {
                 break;
             }
             case 'Q':
-                return; // Quitter la méthode
+                return; // Quitter la mï¿½thode
             default:
-                cout << "Réponse invalide !" << endl;
+                cout << "Rï¿½ponse invalide !" << endl;
         }
 
         do {
@@ -185,7 +185,7 @@ void respensable::modifier() {
             cin >> reponse;
 
             if (toupper(reponse) != 'O' && toupper(reponse) != 'N') {
-                cout << "Réponse invalide !" << endl;
+                cout << "Rï¿½ponse invalide !" << endl;
             }
         } while (toupper(reponse) != 'O' && toupper(reponse) != 'N');
 
@@ -228,9 +228,9 @@ void respensable::setrole(string role)
 {
     this->role=role;}
 void respensable::supprimer_session() {
-    // Vérifier si la liste des sessions est vide
+    // Vï¿½rifier si la liste des sessions est vide
     if (sessions.empty()) {
-        cout << "La liste des sessions est vide. Aucune session à supprimer." << endl;
+        cout << "La liste des sessions est vide. Aucune session ï¿½ supprimer." << endl;
         return;
     }
 
@@ -240,23 +240,23 @@ void respensable::supprimer_session() {
         cout << i + 1 << ". Session " << *sessions[i] << endl;
     }
 
-    // Demander à l'utilisateur de saisir le numéro de la session à supprimer
+    // Demander ï¿½ l'utilisateur de saisir le numï¿½ro de la session ï¿½ supprimer
     int numero;
     do {
-        cout << "Saisir le numéro de la session à supprimer : ";
+        cout << "Saisir le numï¿½ro de la session ï¿½ supprimer : ";
         cin >> numero;
 
-        // Vérifier si le numéro est valide
+        // Vï¿½rifier si le numï¿½ro est valide
         if (numero < 1 || numero > sessions.size()) {
-            cout << "Numéro de session invalide. Veuillez saisir un numéro valide." << endl;
+            cout << "Numï¿½ro de session invalide. Veuillez saisir un numï¿½ro valide." << endl;
         }
-    } while (numero < 1 || numero > sessions.size()); // Répéter tant que l'indice est invalide
+    } while (numero < 1 || numero > sessions.size()); // Rï¿½pï¿½ter tant que l'indice est invalide
 
     // Supprimer la session
     delete sessions[numero - 1];
     sessions.erase(sessions.begin() + numero - 1);
 
-    cout << "Session numéro " << numero << " supprimée avec succès." << endl;
+    cout << "Session numï¿½ro " << numero << " supprimï¿½e avec succï¿½s." << endl;
 }
 void respensable::saisir_sessions(vector<int*> session)
 {
@@ -277,15 +277,15 @@ respensable::~respensable() {
         delete sessions[i];
     }}
 
-// Surcharge de l'opérateur d'assignation
-// Surcharge de l'opérateur d'assignation
-// Surcharge de l'opérateur d'assignation
+// Surcharge de l'opï¿½rateur d'assignation
+// Surcharge de l'opï¿½rateur d'assignation
+// Surcharge de l'opï¿½rateur d'assignation
 respensable& respensable::operator=(const respensable &autre) {
-    if (this != &autre) { // Vérifier que ce n'est pas la même instance
-        // Copie des attributs de l'objet passé en argument dans l'objet actuel
-        personne::operator=(autre); // Appel de l'opérateur d'assignation de la classe de base
+    if (this != &autre) { // Vï¿½rifier que ce n'est pas la mï¿½me instance
+        // Copie des attributs de l'objet passï¿½ en argument dans l'objet actuel
+        personne::operator=(autre); // Appel de l'opï¿½rateur d'assignation de la classe de base
 
-        // Copie de l'attribut spécifique à responsable
+        // Copie de l'attribut spï¿½cifique ï¿½ responsable
         role = autre.role;
 
         // Suppression des anciennes sessions
@@ -296,11 +296,11 @@ respensable& respensable::operator=(const respensable &autre) {
 
         // Copie des nouvelles sessions
         for (int i = 0; i < autre.sessions.size(); ++i) {
-            int* newSession = new int(*autre.sessions[i]); // Allouer une nouvelle mémoire et copier la valeur
+            int* newSession = new int(*autre.sessions[i]); // Allouer une nouvelle mï¿½moire et copier la valeur
             sessions.push_back(newSession);
         }
     }
-    return *this; // Retourner une référence vers l'objet actuel
+    return *this; // Retourner une rï¿½fï¿½rence vers l'objet actuel
 }
 ostream& operator<<(ostream &o,respensable &r)
 {

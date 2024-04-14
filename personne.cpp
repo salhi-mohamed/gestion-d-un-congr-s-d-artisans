@@ -111,7 +111,7 @@ string personne::getprenom()
 }
 int personne::gettel()
 {
-    cout<<"le numero de téléphone de ce personne est : "<<endl;
+    cout<<"le numero de tï¿½lï¿½phone de ce personne est : "<<endl;
     return tel;
 }
 string personne::getemail()
@@ -170,13 +170,13 @@ void personne::saisirlangues()
 
 void personne::afficherPersonne()
 {
-    cout<<"Affichage des informations relatives à ce personne : "<<endl;
+    cout<<"Affichage des informations relatives ï¿½ ce personne : "<<endl;
     cout<<"Cin : "<<Cin<<endl;
     cout<<"Nom : "<<nom<<endl;
-    cout<<"Prénom : "<<prenom<<endl;
-    cout<<"Numéro de téléphone : "<<tel<<endl;
+    cout<<"Prï¿½nom : "<<prenom<<endl;
+    cout<<"Numï¿½ro de tï¿½lï¿½phone : "<<tel<<endl;
     cout<<"Adresse email :  "<<email<<endl;
-    cout<<"Adresse de résidence : "<<adresse<<endl;
+    cout<<"Adresse de rï¿½sidence : "<<adresse<<endl;
     cout<<"Nombre de langues : "<<nblangues<<endl;
     getlangues();
 
@@ -196,11 +196,11 @@ void personne::afficherPersonne()
                 cin >> nom;
                 break;
             case 'P':
-                cout << "Saisir le nouveau prénom : ";
+                cout << "Saisir le nouveau prï¿½nom : ";
                 cin >> prenom;
                 break;
             case 'T':
-                cout << "Saisir le nouveau numéro de téléphone : ";
+                cout << "Saisir le nouveau numï¿½ro de tï¿½lï¿½phone : ";
                 cin >> tel;
                 break;
             case 'E':
@@ -223,10 +223,10 @@ void personne::afficherPersonne()
                 }
                 break;
             case 'Q':
-                return; // Quitter la méthode
+                return; // Quitter la mï¿½thode
             default:
-                cout << "Réponse invalide !" << endl;
-                continue; // Revenir au début de la boucle pour redemander une réponse valide
+                cout << "Rï¿½ponse invalide !" << endl;
+                continue; // Revenir au dï¿½but de la boucle pour redemander une rï¿½ponse valide
         }
 
         do {
@@ -234,7 +234,7 @@ void personne::afficherPersonne()
             cin >> reponse;
 
             if (toupper(reponse) != 'O' && toupper(reponse) != 'N') {
-                cout << "Réponse invalide !" << endl;
+                cout << "Rï¿½ponse invalide !" << endl;
             }
         } while (toupper(reponse) != 'O' && toupper(reponse) != 'N');
 
@@ -258,7 +258,7 @@ void personne::ajouterLangue()
 
 }
 void personne::supprimer_langue() {
-    // Vérifier si la liste des langues est vide
+    // Vï¿½rifier si la liste des langues est vide
     if (langues.empty()) {
         cout << "La liste des langues est vide." << endl;
         return;
@@ -270,34 +270,34 @@ void personne::supprimer_langue() {
         cout << i + 1 << ". " << langues[i] << endl;
     }
 
-    // Demander à l'utilisateur le numéro de la langue à supprimer
+    // Demander ï¿½ l'utilisateur le numï¿½ro de la langue ï¿½ supprimer
     int choix;
-    cout << "Entrez le numéro de la langue à supprimer : ";
+    cout << "Entrez le numï¿½ro de la langue ï¿½ supprimer : ";
     cin >> choix;
 
-    // Vérifier si le numéro est valide
+    // Vï¿½rifier si le numï¿½ro est valide
     if (choix < 1 || choix > langues.size()) {
-        cout << "Numéro invalide. Opération annulée." << endl;
+        cout << "Numï¿½ro invalide. Opï¿½ration annulï¿½e." << endl;
         return;
     }
 
-    // Supprimer la langue sélectionnée
+    // Supprimer la langue sï¿½lectionnï¿½e
     langues.erase(langues.begin() + choix - 1);
 
-    // Mettre à jour nblangues
+    // Mettre ï¿½ jour nblangues
     nblangues = langues.size();
 
-    cout << "Langue supprimée avec succès." << endl;
+    cout << "Langue supprimï¿½e avec succï¿½s." << endl;
 }
 
 
 ostream& operator<<(ostream& o,const personne &p)
 {
-    o<<"Affichage des informations relatives à ce personne : "<<endl;
+    o<<"Affichage des informations relatives ï¿½ ce personne : "<<endl;
     o<<"Cin : "<<p.Cin<<endl;
     o<<"Nom : "<<p.nom<<endl;
     o<<"Prenom : "<<p.prenom<<endl;
-    o<<"Numéro de téléphone : "<<p.tel<<endl;
+    o<<"Numï¿½ro de tï¿½lï¿½phone : "<<p.tel<<endl;
     o<<"Adresse mail : "<<p.email<<endl;
     o<<"Adresse de vie : "<<p.adresse<<endl;
     o<<"Nombre de langues : "<<p.nblangues<<endl;
@@ -306,4 +306,5 @@ ostream& operator<<(ostream& o,const personne &p)
     {
         o<<"Langue "<<i+1<<" : "<<p.langues[i]<<endl;
     }
+    return o;
 }

@@ -75,7 +75,7 @@ void evaluation::editerEvaluation()
 
     char reponse;
     do {
-        cout << "Que voulez-vous modifier pour cette évaluation ?" << endl;
+        cout << "Que voulez-vous modifier pour cette ï¿½valuation ?" << endl;
         cout << "P : Points, D : Date, Q : Quitter" << endl;
         cin >> reponse;
 
@@ -85,15 +85,15 @@ void evaluation::editerEvaluation()
                 cin >> points;
                 break;
             case 'D':
-                cout << "Saisir la nouvelle date d'évaluation : ";
-                cin.ignore(); // Ignorer le caractère de nouvelle ligne restant dans le buffer
+                cout << "Saisir la nouvelle date d'ï¿½valuation : ";
+                cin.ignore(); // Ignorer le caractï¿½re de nouvelle ligne restant dans le buffer
                 getline(cin, date_evaluation);
                 break;
             case 'Q':
-                return; // Quitter la méthode
+                return; // Quitter la mï¿½thode
             default:
-                cout << "Réponse invalide !" << endl;
-                continue; // Revenir au début de la boucle pour redemander une réponse valide
+                cout << "Rï¿½ponse invalide !" << endl;
+                continue; // Revenir au dï¿½but de la boucle pour redemander une rï¿½ponse valide
         }
 
         do {
@@ -101,7 +101,7 @@ void evaluation::editerEvaluation()
             cin >> reponse;
 
             if (toupper(reponse) != 'O' && toupper(reponse) != 'N') {
-                cout << "Réponse invalide !" << endl;
+                cout << "Rï¿½ponse invalide !" << endl;
             }
         } while (toupper(reponse) != 'O' && toupper(reponse) != 'N');
 
@@ -116,9 +116,10 @@ void evaluation :: afficher_evaluation()
 }
 ostream& operator<<(ostream& o,const evaluation &e)
 {
-    o<<"Affichage des informations relatives à cette evaluation : "<<endl;
+    o<<"Affichage des informations relatives ï¿½ cette evaluation : "<<endl;
     o<<"Identifiant de l' evaluation :"<<e.id_evaluation<<endl;
-    o<<"Date de l'évaluation : "<<e.date_evaluation<<endl;
+    o<<"Date de l'ï¿½valuation : "<<e.date_evaluation<<endl;
     o<<"Points : "<<e.points<<endl;
+    return o;
 }
 evaluation::~evaluation(){}

@@ -27,7 +27,7 @@ int main()
    r->afficherPersonne();
 
 
-   /*cout<<"saisir session 1 : "<<endl;
+   cout<<"saisir session 1 : "<<endl;
    cin>>session;
    sessionP=&session;
    cout<<"saisir session 2 : "<<endl;
@@ -35,23 +35,23 @@ int main()
    sessionP2=&session2;
    r->ajouter_session(sessionP);
    r->ajouter_session(sessionP2);
-  // r->afficherPersonne();
+   r->afficherPersonne();
    respensable r2=*r;
    cout<<"*****************"<<endl;
-   //r2.afficherPersonne();*/
-  /* respensable r3;
+   //r2.afficherPersonne();
+   respensable r3;
     r3=*r;
     cout<<"test de l affichage apres l appel de l'operateur = "<<endl;
-   r3.afficherPersonne();*/
-  /* personne *p;
+   r3.afficherPersonne();
+  personne *p;
    p=new personne();
    p->saisir_personne();
-   p->afficherPersonne();*/
-   /*personne *p;
+   p->afficherPersonne();
+   personne *p;
    p=new personne();
    p->saisir_personne();
-   respensable* r = dynamic_cast<respensable*>(p);*/
-   /*respensable *r;
+   respensable* r = dynamic_cast<respensable*>(p);
+   respensable *r;
    r=new respensable();
    r->saisir_respensable();
    r->afficherPersonne();
@@ -59,16 +59,16 @@ int main()
    r2=*r;
    cout<<"test"<<endl;
    r2.afficherPersonne();
-*/
-   /*personne *p;
+
+   personne *p;
    p=new personne();
    p->saisir_personne();
-   cout<<*p;*/
-  /* stand *s;
+   cout<<*p;
+   stand *s;
    s=new stand();
    s->saisir_stand();
-   cout<<*s;*/
-   /*evaluation *e;
+   cout<<*s;
+   evaluation *e;
    e=new evaluation();
    e->saisir_evaluation();
    cout<<*e;*/
