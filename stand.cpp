@@ -108,5 +108,15 @@ ostream& operator<<(ostream& o,const stand &s)
     o<<"Affichage des informations relatives à ce stand : "<<endl;
     o<<"Identifiant du stand :"<<s.id_stand<<endl;
     o<<"Emplacement du stand : "<<s.emplacement<<endl;
+    return o;
 }
 stand::~stand(){}
+istream& operator>>(istream &i,stand &s)
+{
+    cout<<"Saisir l'identifiant du stand : "<<endl;
+    i>>s.id_stand;
+    cout<<"Saisir l'emplacement du stand : "<<endl;
+    i>>s.emplacement;
+    return i;
+
+}

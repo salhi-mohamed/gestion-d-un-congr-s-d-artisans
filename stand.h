@@ -19,6 +19,7 @@ class stand
      string getEmplacement();
      void saisir_stand();
      friend ostream& operator<<(ostream& ,const stand&);
+     friend istream& operator>>(istream&, stand&);
      ~stand();
 };
 

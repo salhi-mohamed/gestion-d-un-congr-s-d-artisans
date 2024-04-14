@@ -314,3 +314,25 @@ ostream& operator<<(ostream &o,respensable &r)
     }
     return o;
 }
+istream& operator>>(istream &in, respensable &r)
+{
+    // Utiliser la surcharge de l'opérateur >> de la classe personne
+    in >> static_cast<personne&>(r);
+
+    cout << "Saisir le rôle : " << endl;
+    in >> r.role;
+
+    // Saisie des sessions
+    cout << "Saisir le nombre de sessions : ";
+    int nbSessions;
+    in >> nbSessions;
+    for (int i = 0; i < nbSessions; ++i) {
+        int* session = new int;
+        cout << "Saisir l'identifiant de la session " << i + 1 << " : ";
+        in >> *session;
+        r.sessions.push_back(session);
+    }
+
+    return in;
+}
+

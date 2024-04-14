@@ -42,6 +42,7 @@ class personne
          void supprimer_langue( );
          void saisir_personne();
          friend ostream& operator<<(ostream&,const personne &);
+         friend istream& operator>>(istream& ,personne&);
 
 
 };

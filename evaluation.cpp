@@ -122,4 +122,14 @@ ostream& operator<<(ostream& o,const evaluation &e)
     o<<"Points : "<<e.points<<endl;
     return o;
 }
+istream& operator>>(istream &i,evaluation &e)
+{
+    cout<<"Saisir l'identifiant de l'evaluation :" <<endl;
+    i>>e.id_evaluation;
+    cout<<"Saisir la date de l'evaluation : "<<endl;
+    i>>e.date_evaluation;
+    cout<<"Saisir les points de cette evaluation : "<<endl;
+    i>>e.points;
+    return i ;
+}
 evaluation::~evaluation(){}

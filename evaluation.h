@@ -22,6 +22,7 @@ class evaluation
      void afficher_evaluation();
      void saisir_evaluation();
      friend ostream& operator<<(ostream&,const evaluation&);
+     friend istream& operator>>(istream&,evaluation&);
      ~evaluation();
 };
 

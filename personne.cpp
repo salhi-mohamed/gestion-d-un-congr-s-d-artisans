@@ -308,3 +308,28 @@ ostream& operator<<(ostream& o,const personne &p)
     }
     return o;
 }
+istream& operator>>(istream &i,personne &p)
+{
+    cout<<"Saisir le numero d'identité : "<<endl;
+    i>>p.Cin;
+    cout<<"Saisir le nom : "<<endl;
+    i>>p.nom;
+    cout<<"Saisir le prénom : "<<endl;
+    i>>p.prenom;
+    cout<<"Saisir le numero de telephone : "<<endl;
+    i>>p.tel;
+    cout<<"Saisir l'adresse mail : "<<endl;
+    i>>p.email;
+    cout<<"Saisir l'adresse de vie : "<<endl;
+    i>>p.adresse;
+    cout<<"Saisir le nombre de langues pratiquées : "<<endl;
+    i>>p.nblangues;
+   for(int j = 0; j < p.nblangues; j++)
+    {
+        string langue;
+        cout << "Saisir la langue " << j + 1 << " : " << endl;
+        i >> langue;
+        p.langues.push_back(langue);
+    }
+    return i ;
+}

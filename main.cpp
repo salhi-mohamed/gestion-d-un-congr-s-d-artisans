@@ -71,11 +71,28 @@ int main()
    evaluation *e;
    e=new evaluation();
    e->saisir_evaluation();
-   cout<<*e;*/
+   cout<<*e;
  respensable *r;
  r=new respensable();
   //r->modifier();
   r->saisir_respensable();
 
   r->supprimer_session();
-  cout<<*r;}
+  cout<<*r;
+  stand *s;
+  s=new stand();
+  cin>>*s;
+  cout<<*s;
+  evaluation *e;
+  e=new evaluation();
+  cin>>*e;
+  cout<<*e;
+  personne *p;
+  p=new personne();
+  cin>>*p;
+  cout<<*p;
+  respensable *r;
+  r=new respensable();
+  cin>>*r;
+  cout<<*r;*/
+  }
