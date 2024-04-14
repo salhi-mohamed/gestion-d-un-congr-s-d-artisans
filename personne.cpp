@@ -2,10 +2,10 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-/*personne::personne()
+personne::personne()
 {
-    int nblg;
-    cout<<"saisir le numero de cin : "<<endl;
+
+    /*cout<<"saisir le numero de cin : "<<endl;
     cin>>Cin;
     cout<<"saisir le nom : "<<endl;
     cin>>nom;
@@ -18,16 +18,16 @@ using namespace std;
     cout<<"saisir l adresse : "<<endl;
     cin>>adresse;
     cout<<"saisir le nombre de de langues :  "<<endl;
-    cin>>nblg;
-    for(int i=0;i<nblg;i++)
+    cin>>nblangues;
+    for(int i=0;i<nblangues;i++)
     {
         string langue;
         cout<<"saisir la langue numero : "<<i+1<<endl;
         std::cin>>langue;
-        langues.push_back(langue);}
+        langues.push_back(langue);}*/
 
 }
-personne::personne(int c,string n,string p ,int t ,string e,string a)
+personne::personne(int c,string n,string p ,int t ,string e,string a,int nblg)
 {
 
     Cin=c;
@@ -35,16 +35,15 @@ personne::personne(int c,string n,string p ,int t ,string e,string a)
     prenom=p;
     tel=t;;
     email=e;
-    adresse=e;
-    int nblg;
-    cout<<"saisir le nombre de de langues :  "<<endl;
-    cin>>nblg;
-    for(int i=0;i<nblg;i++)
+    adresse=a;
+    nblangues=nblg;
+   for(int i=0;i<nblangues;i++)
     {
         string langue;
         cout<<"saisir la langue numero : "<<i+1<<endl;
         std::cin>>langue;
         langues.push_back(langue);}
+
 
 
 
@@ -57,7 +56,8 @@ personne::personne(const personne &p)
     tel=p.tel;
     email=p.email;
     adresse=p.adresse;
-    for(int i=0;i<p.langues.size();i++)
+    nblangues=p.nblangues;
+    for(int i=0;i<(p.langues).size();i++)
     {
         string langue;
         langue=p.langues[i];
@@ -71,14 +71,14 @@ personne::personne(const personne &p)
     }
     langues.clear();
 }*/
-/*int personne::getcin()
+int personne::getcin()
 {
-    cout<<"le numéro de cin de ce personne est : "<<endl;
+
     return Cin;
 }
 string personne::getnom()
 {
-    cout<<"le nom de ce personne est : "<<endl;
+
     return nom;
 }
 string personne::getprenom()
@@ -106,7 +106,7 @@ void personne::getlangues()
     cout<<"Les langues que ce personne maitrisent sont : "<<endl;
     for(int i=0;i<langues.size();i++)
     {
-        cout<<"langue "<<i+1<<" : "<<(langues[i])<<endl;
+        cout<<"langue "<<i+1<<" : "<<langues[i]<<endl;
     }
 }
 void personne::setcin(int c)
@@ -143,9 +143,9 @@ void personne::saisirlangues()
         string langue;
         cout<<"saisir la langue numero : "<<i+1<<endl;
         std::cin>>langue;
-        langues.push_back(langue);}}*/
+        langues.push_back(langue);}}
 
-/*void personne::afficherPersonne()
+void personne::afficherPersonne()
 {
     cout<<"Affichage des informations relatives à ce personne : "<<endl;
     cout<<"Cin : "<<Cin<<endl;
@@ -154,10 +154,11 @@ void personne::saisirlangues()
     cout<<"Numéro de téléphone : "<<tel<<endl;
     cout<<"Adresse email :  "<<email<<endl;
     cout<<"Adresse de résidence : "<<adresse<<endl;
+    cout<<"Nombre de langues : "<<nblangues<<endl;
     getlangues();
 
-}*/
-/*void personne::modifier()
+}
+void personne::modifier()
 {
     char rep,reponse;
     do
@@ -189,8 +190,8 @@ void personne::saisirlangues()
 
     }
     while(reponse!='N');
-}*/
-/*void personne::ajouterLangue()
+}
+void personne::ajouterLangue()
 {
    int nb_langues;
   cout<<"combien de langues voulez-vous ajoutez ? "<<endl;
@@ -202,29 +203,19 @@ void personne::saisirlangues()
       cin>>lang;
       langues.push_back(lang);
   }
+  nblangues=nblangues+nb_langues;
 
 
 }
 void personne::supprimer_langue(int i )
 {
     langues.erase(langues.begin()+i);
-    cout<<"suppression effectuée avec succées : "<<endl;
+    cout<<"suppression effectuée avec succées : "<<endl;     /* int Cin;
+      string nom;
+      string prenom;
+      int tel;
+      string email;
+      string adresse;*/
+      nblangues=nblangues-1;
 }
-*/
-complexe::complexe(float r,float  i )
-{
 
-    real=r;
-    im=i;
-}
-complexe complexe::additionner(complexe c)
-{
-    complexe *x;
-    x=new complexe(real+c.real,im+c.im);
-    return *x;
-
-}
-void complexe ::afficher()
-{
-    cout<<real<<" + "<<im<<"i "<<endl;
-}

@@ -10,38 +10,21 @@ class respensable :public personne
 {
   protected :
     string role;
-    vector<int> sessions;
+    vector<int*> sessions;
   public :
     respensable() ;
-    respensable(string role,int c,string n,string p ,int t ,string e,string a);
+    respensable(string role,int c,string n,string p ,int t ,string e,string a,int nblg,vector<int*>);
     respensable(const respensable &);
     string getrole();
-    void getsessions();
+   vector<int*> getsessions();
     void setrole(string);
-    //void saisir_sessions();
-    void ajouter_session();
+    void saisir_sessions(vector<int*>);
+    void ajouter_session(int*);
     void supprimer_session(int);
-
-     int getcin(); // methode qui retourne le num de cin de la personne
-        string getnom(); //methode qui retourne le nom de la personne
-        string getprenom(); // methode qui retourne le prenom de la personne
-        int gettel(); //methode qui retourne le numero de telephone de la personne
-        string getemail(); //methode qui retourne l email de la personne
-        string getadresse(); //methode qui retourne l adresse de residence de la personne
-        void getlangues(); //methode qui affiche les langues maitrisées par la personne
-        void setcin(int); //methode qui permet le saisie de num de cin de la personne
-        void setnom(string);//methode qui permet le saisie du nom de la personne
-        void setprenom(string);
-        void settel(int);
-        void setemail(string);
-        void setadresse(string);
-        void afficherPersonne();
-       //void supprimer();
-        void modifier();
-        void saisirlangues();
-        void ajouterLangue();
-        void supprimer_langue(int );
-
+    void afficherPersonne();
+    void modifier();
+    ~respensable();
+    respensable & operator=(const respensable &);
 
 };
 
