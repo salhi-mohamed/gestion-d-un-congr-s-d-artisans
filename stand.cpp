@@ -72,7 +72,11 @@ void stand::editerStand() {
     char reponse;
 
     do {
-        cout << "Que voulez-vous modifier pour ce stand ? I : Identifiant, E : Emplacement" << endl;
+        cout << "Que voulez-vous modifier pour ce stand ?" << endl;
+        cout << "I : Identifiant" << endl;
+        cout << "E : Emplacement" << endl;
+        cout << "H : Heure d'ouverture" << endl;
+        cout << "F : Heure de fermeture" << endl;
         cin >> reponse;
 
         switch (toupper(reponse)) {
@@ -84,6 +88,14 @@ void stand::editerStand() {
                 cout << "Saisir le nouvel emplacement : ";
                 cin.ignore(); // Ignorer le caractère de nouvelle ligne restant dans le buffer
                 getline(cin, emplacement);
+                break;
+            case 'H':
+                cout << "Saisir la nouvelle heure d'ouverture : ";
+                cin >> heure_ouverture;
+                break;
+            case 'F':
+                cout << "Saisir la nouvelle heure de fermeture : ";
+                cin >> heure_fermeture;
                 break;
             default:
                 cout << "Réponse invalide !" << endl;
@@ -103,11 +115,14 @@ void stand::editerStand() {
 }
 
 
+
 ostream& operator<<(ostream& o,const stand &s)
 {
     o<<"Affichage des informations relatives à ce stand : "<<endl;
     o<<"Identifiant du stand :"<<s.id_stand<<endl;
     o<<"Emplacement du stand : "<<s.emplacement<<endl;
+    o<<"Heure d'ouverture : "<<s.heure_ouverture<<endl;
+    o<<"Heure fermeture : "<<s.heure_fermeture<<endl;
     return o;
 }
 stand::~stand(){}
@@ -117,6 +132,29 @@ istream& operator>>(istream &i,stand &s)
     i>>s.id_stand;
     cout<<"Saisir l'emplacement du stand : "<<endl;
     i>>s.emplacement;
+    cout<<"Saisir l'heure d'ouverture : "<<endl;
+    i>>s.heure_ouverture;
+    cout<<"Saisir l'heure de fermeture : "<<endl;
+    i>>s.heure_fermeture;
     return i;
 
+}
+void stand::set_heure_ouverture(string heure_ouverture)
+{
+    this->heure_ouverture=heure_ouverture;
+}
+string stand::get_heure_ouverture()
+{
+    return heure_ouverture;
+}
+void stand::set_heure_fermeture(string heure_fermeture)
+{
+    this->heure_fermeture=heure_fermeture;
+}
+string stand::get_heure_fermeture()
+{
+    return heure_fermeture;
+}
+bool stand::estOuvert(string heure_actuelle) const {
+    return (heure_actuelle >= heure_ouverture && heure_actuelle <= heure_fermeture);
 }

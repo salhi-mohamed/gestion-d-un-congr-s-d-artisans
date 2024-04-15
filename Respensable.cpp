@@ -335,4 +335,28 @@ istream& operator>>(istream &in, respensable &r)
 
     return in;
 }
+int respensable::calculerExperience() const {
+    return sessions.size();
+}
 
+
+void respensable::afficherArtisanGagnant(const vector<evaluation>& evaluations) const {
+    int meilleurScore = 0;
+    int idArtisanGagnant = -1;
+
+    // Parcourir toutes les évaluations pour trouver le score maximum avec une boucle for classique
+    for (int i = 0; i < evaluations.size(); ++i) {
+        const evaluation& eval = evaluations[i];
+        if (eval.getPoints() > meilleurScore) {
+            meilleurScore = eval.getPoints();
+            idArtisanGagnant = eval.get_id_artisan();
+        }
+    }
+
+    // Afficher l'artisan gagnant s'il existe
+    if (idArtisanGagnant != -1) {
+        cout << "L'artisan gagnant est celui avec l'ID : " << idArtisanGagnant << endl;
+    } else {
+        cout << "Aucun artisan n'a été évalué." << endl;
+    }
+}

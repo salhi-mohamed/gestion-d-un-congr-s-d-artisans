@@ -32,10 +32,18 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Artisan.cpp" />
+		<Unit filename="Artisan.h" />
+		<Unit filename="Bijouterie.cpp" />
+		<Unit filename="Bijouterie.h" />
+		<Unit filename="Broderie.cpp" />
+		<Unit filename="Broderie.h" />
+		<Unit filename="Creation.cpp" />
+		<Unit filename="Creation.h" />
 		<Unit filename="Respensable.cpp" />
 		<Unit filename="Respensable.h" />
-		<Unit filename="employe.cpp" />
-		<Unit filename="employe.h" />
+		<Unit filename="Sculpture.cpp" />
+		<Unit filename="Sculpture.h" />
 		<Unit filename="evaluation.cpp" />
 		<Unit filename="evaluation.h" />
 		<Unit filename="main.cpp" />

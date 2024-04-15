@@ -14,12 +14,15 @@ void evaluation::saisir_evaluation()
     cin>>date_evaluation;
     cout<<"saisir les points correspendants a cet evaluation : "<<endl;
     cin>>points;
+    cout<<"saisir l'id de l'artisan correspendant a cette evaluation : "<<endl;
+    cin>>artisan_id;
 }
-evaluation::evaluation(int i,int p,string d)
+evaluation::evaluation(int id,int points,string date,int id_artisan)
 {
-    id_evaluation=i;
-    date_evaluation=d;
-    points=p;
+    id_evaluation=id;
+    date_evaluation=date;
+    this->points=points;
+    artisan_id=id_artisan;
 }
 void evaluation::setId(int id)
 {
@@ -37,8 +40,7 @@ int evaluation::getId()
 {
     return id_evaluation;
 }
-int evaluation::getPoints()
-{
+int evaluation::getPoints() const {
     return points;
 }
 string evaluation::getDate_evalution()
@@ -120,10 +122,13 @@ ostream& operator<<(ostream& o,const evaluation &e)
     o<<"Identifiant de l' evaluation :"<<e.id_evaluation<<endl;
     o<<"Date de l'�valuation : "<<e.date_evaluation<<endl;
     o<<"Points : "<<e.points<<endl;
+    o<<"Id de l'artisan correspendant : "<<e.artisan_id<<endl;
     return o;
 }
 istream& operator>>(istream &i,evaluation &e)
 {
+    cout<<"Saisir l'id de l'artisan correspendant à cette evaluation : "<<endl;
+    i>>e.artisan_id;
     cout<<"Saisir l'identifiant de l'evaluation :" <<endl;
     i>>e.id_evaluation;
     cout<<"Saisir la date de l'evaluation : "<<endl;
@@ -133,3 +138,11 @@ istream& operator>>(istream &i,evaluation &e)
     return i ;
 }
 evaluation::~evaluation(){}
+void evaluation::set_id_artisan(int id_artisan)
+{
+    artisan_id=id_artisan;
+}
+int evaluation::get_id_artisan()const
+{
+    return artisan_id;
+}

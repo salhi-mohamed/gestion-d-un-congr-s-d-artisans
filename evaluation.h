@@ -8,16 +8,20 @@ class evaluation
    int id_evaluation;
    int points;
    string date_evaluation;
+   int artisan_id;
    public :
      evaluation();
-     evaluation(int,int,string);
+     evaluation(int,int,string,int);
      void setId(int);
      void setPoints(int);
      void setDate_evaluation(string);
      int getId();
-     int getPoints();
+     int getPoints() const;
      string getDate_evalution();
+     void set_id_artisan(int);
+     int get_id_artisan()const;
     // void evaluer(int);
+
      void editerEvaluation();
      void afficher_evaluation();
      void saisir_evaluation();

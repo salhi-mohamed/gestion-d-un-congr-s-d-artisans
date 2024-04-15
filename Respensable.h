@@ -4,6 +4,7 @@
 #include<string>
 #include<iostream>
 #include"personne.h"
+#include"evaluation.h"
 
 using namespace std;
 class respensable :public personne
@@ -28,6 +29,8 @@ class respensable :public personne
     void saisir_respensable();
     friend ostream& operator<<(ostream&,respensable&);
     friend istream& operator>>(istream&,respensable&);
+     int calculerExperience() const;
+     void afficherArtisanGagnant(const vector<evaluation>& evaluations) const;
 };
 
 #endif // RESPENSABLE_H_INCLUDED

@@ -7,11 +7,18 @@ class stand
 {
   int id_stand;
   string emplacement;
+  string heure_ouverture;
+    string heure_fermeture;
+
   public :
      stand();
      stand(int,string);
      void setId(int);
      int getId();
+     void set_heure_ouverture(string);
+     string get_heure_ouverture();
+     void set_heure_fermeture(string);
+     string get_heure_fermeture();
      void  setEmplacement(string);
      void editerStand();
      //void supprimerStand();
@@ -21,6 +28,7 @@ class stand
      friend ostream& operator<<(ostream& ,const stand&);
      friend istream& operator>>(istream&, stand&);
      ~stand();
+      bool estOuvert(string heure_actuelle) const;
 };
 
 
