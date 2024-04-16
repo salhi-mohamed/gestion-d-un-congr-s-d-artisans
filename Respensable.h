@@ -5,6 +5,7 @@
 #include<iostream>
 #include"personne.h"
 #include"evaluation.h"
+#include<set>
 
 using namespace std;
 class respensable :public personne
@@ -12,6 +13,7 @@ class respensable :public personne
   protected :
     string role;
     vector<int*> sessions;
+    std::set<std::string> tasks;
   public :
     respensable() ;
     respensable(string role,int c,string n,string p ,int t ,string e,string a,int nblg,vector<int*>);

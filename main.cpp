@@ -100,17 +100,8 @@ int main()
   r=new respensable();
   cin>>*r;
   cout<<*r;*/
-  Artisan *a;
-  a=new Artisan();
-  cin>>*a;
-  Creation *c1,*c2;
-  c1=new Creation();
-  cin>>*c1;
-  c2=new Creation();
-  cin>>*c2;
-
-  a->ajouterCreation(c1);
-  a->ajouterCreation(c2);
-  cout<<"le nombre de creation est : "<<a->nombreDeCreations()<<endl;
-
-  }
+  respensable *r;
+  r=new respensable();
+  cin>>*r;
+  cout<<*r;
+}

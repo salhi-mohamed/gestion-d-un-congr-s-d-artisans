@@ -304,7 +304,7 @@ respensable& respensable::operator=(const respensable &autre) {
 }
 ostream& operator<<(ostream &o,respensable &r)
 {
-    o<<static_cast<const personne&>(r);
+   /* o<<static_cast<const personne&>(r);
     o<<"role : "<<r.role<<endl;
     o<<"Les sessions : "<<endl;
     for(int i=0;i<r.sessions.size();i++)
@@ -312,10 +312,26 @@ ostream& operator<<(ostream &o,respensable &r)
         o<<"session  "<<i+1<<" : "<<*(r.sessions[i])<<endl;
 
     }
+    return o;*/
+
+      o << static_cast<const personne&>(r);
+    o << "Rôle : " << r.role << endl;
+    o << "Les sessions : " << endl;
+    for (size_t i = 0; i < r.sessions.size(); ++i) {
+        o << "Session " << i + 1 << " : " << *(r.sessions[i]) << endl;
+    }
+
+    // Affichage des tâches attribuées au responsable
+    o << "Tâches attribuées au responsable : " << endl;
+    for (std::set<std::string>::iterator it = r.tasks.begin(); it != r.tasks.end(); ++it) {
+        o << "Tâche : " << *it << endl;
+    }
+
     return o;
+
 }
 istream& operator>>(istream &in, respensable &r)
-{
+{/*
     // Utiliser la surcharge de l'opérateur >> de la classe personne
     in >> static_cast<personne&>(r);
 
@@ -333,7 +349,38 @@ istream& operator>>(istream &in, respensable &r)
         r.sessions.push_back(session);
     }
 
+    return in;*/
+     // Utiliser la surcharge de l'opérateur >> de la classe personne
+    in >> static_cast<personne&>(r);
+
+    cout << "Saisir le rôle : ";
+    in >> r.role;
+
+    // Saisie des sessions
+    cout << "Saisir le nombre de sessions : ";
+    int nbSessions;
+    in >> nbSessions;
+    for (int i = 0; i < nbSessions; ++i) {
+        int* session = new int;
+        cout << "Saisir l'identifiant de la session " << i + 1 << " : ";
+        in >> *session;
+        r.sessions.push_back(session);
+    }
+
+    // Saisie des tâches attribuées au responsable
+    cout << "Saisir les tâches attribuées au responsable : " << endl;
+    string task;
+    while (true) {
+        cout << "Saisir une tâche (ou 'fin' pour terminer la saisie) : ";
+        in >> task;
+        if (task == "fin") {
+            break;
+        }
+        r.tasks.insert(task);
+    }
+
     return in;
+
 }
 int respensable::calculerExperience() const {
     return sessions.size();
