@@ -181,7 +181,7 @@ void personne::afficherPersonne()
     getlangues();
 
 }
- void personne::modifier() {
+ /*void personne::modifier() {
     char reponse;
 
     do {
@@ -240,6 +240,7 @@ void personne::afficherPersonne()
 
     } while (toupper(reponse) == 'O');
 }
+*/
 
 void personne::ajouterLangue()
 {
@@ -332,4 +333,8 @@ istream& operator>>(istream &i,personne &p)
         p.langues.push_back(langue);
     }
     return i ;
+}
+void personne::setnblangues(int nblangues)
+{
+    this->nblangues=nblangues;
 }

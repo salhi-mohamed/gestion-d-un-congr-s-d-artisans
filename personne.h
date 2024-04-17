@@ -36,8 +36,9 @@ class personne
         void settel(int);//
         void setemail(string);
         void setadresse(string);
+        void setnblangues(int);
         virtual void afficherPersonne();
-        virtual void modifier();
+        virtual void modifier()=0;
          void saisirlangues();
          void ajouterLangue();
          void supprimer_langue( );

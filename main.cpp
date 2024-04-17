@@ -2,18 +2,10 @@
 #include<iostream>
 #include<vector>
 #include<string>
-#include"stand.h"
 #include"Respensable.h"
-#include"evaluation.h"
-#include"employe.h"
-#include"Artisan.h"
-#include"Creation.h"
-#include"Sculpture.h"
-#include"Broderie.h"
-#include"Bijouterie.h"
-
-
 using namespace std;
+
+
 int main()
 {
     /*int session1,session2;
@@ -104,4 +96,16 @@ int main()
   r=new respensable();
   cin>>*r;
   cout<<*r;
+  r->supprimer_session();
+  cout<<"**********************"<<endl;
+  cout<<*r;
+  //s=r->gettasks();
+  //cout<<r;
+//  cout<<*r;
+  //cout<<*r;
+  //r->afficherPersonne();
+  /*respensable r1;
+  r1=*r;
+  cout<<"test"<<endl;
+  cout<<r1;*/
 }

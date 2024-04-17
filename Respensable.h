@@ -6,22 +6,24 @@
 #include"personne.h"
 #include"evaluation.h"
 #include<set>
-
+#include<list>
+#include<string>
+#include<iostream>
 using namespace std;
 class respensable :public personne
 {
   protected :
     string role;
-    vector<int*> sessions;
     std::set<std::string> tasks;
+    list<int*> sessions;
   public :
     respensable() ;
-    respensable(string role,int c,string n,string p ,int t ,string e,string a,int nblg,vector<int*>);
+    respensable(string role,int c,string n,string p ,int t ,string e,string a,int nblg,list<int*>,set<string>);
     respensable(const respensable &);
-    string getrole();
-   vector<int*> getsessions();
+    string getrole()const ;
+  list<int*> getsessions () const;
     void setrole(string);
-    void saisir_sessions(vector<int*>);
+   // void saisir_sessions(list<int*>);
     void ajouter_session(int*);
     void supprimer_session();
     void afficherPersonne();
@@ -29,10 +31,10 @@ class respensable :public personne
     ~respensable();
     respensable & operator=(const respensable &);
     void saisir_respensable();
-    friend ostream& operator<<(ostream&,respensable&);
+   friend ostream& operator<<(ostream&, const respensable&);
     friend istream& operator>>(istream&,respensable&);
      int calculerExperience() const;
      void afficherArtisanGagnant(const vector<evaluation>& evaluations) const;
+    const set<string>& gettasks() const { return tasks; }
 };
-
 #endif // RESPENSABLE_H_INCLUDED
