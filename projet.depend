@@ -11,12 +11,13 @@
 	<string>
 	<iostream>
 
-1713373447 source:c:\users\lenovo\desktop\projet c++ code blocks\projet\main.cpp
+1713423931 source:c:\users\lenovo\desktop\projet c++ code blocks\projet\main.cpp
 	"personne.h"
 	<iostream>
 	<vector>
 	<string>
 	"Respensable.h"
+	"Artisan.h"
 
 1713219200 source:c:\users\lenovo\desktop\projet c++ code blocks\projet\stand.cpp
 	"stand.h"
@@ -77,7 +78,7 @@
 	<typeinfo>
 	<cstddef>
 
-1713303513 c:\users\lenovo\desktop\projet c++ code blocks\projet\creation.h
+1713432812 c:\users\lenovo\desktop\projet c++ code blocks\projet\creation.h
 	<string>
 	<vector>
 

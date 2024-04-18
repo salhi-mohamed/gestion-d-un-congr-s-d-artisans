@@ -141,7 +141,7 @@ istream& operator>>(istream& i, Creation& c )
     }
     return i;
 }
-void Creation::modifier()
+/*void Creation::modifier()
 {
     cout<<"Mise à jour d'une creation"<<endl;
     char rep,reponse;
@@ -197,4 +197,4 @@ void Creation::modifier()
 
     }
     while(reponse!='N');
-}
+}*/
