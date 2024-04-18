@@ -449,3 +449,10 @@ ostream& operator<<(ostream& os, const respensable& r) {
     }
     return os;
 }
+void respensable::enregistrer()
+{
+     ofstream fichier ("respensableDB.txt",ios::app);
+    if (!fichier)
+        cout << "erreur"<<endl ;
+    fichier<<*this ;
+    fichier.close();}

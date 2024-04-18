@@ -9,6 +9,7 @@
 #include<list>
 #include<string>
 #include<iostream>
+#include<fstream>
 using namespace std;
 class respensable :public personne
 {
@@ -36,5 +37,6 @@ class respensable :public personne
      int calculerExperience() const;
      void afficherArtisanGagnant(const vector<evaluation>& evaluations) const;
     const set<string>& gettasks() const { return tasks; }
+    void enregistrer();
 };
 #endif // RESPENSABLE_H_INCLUDED

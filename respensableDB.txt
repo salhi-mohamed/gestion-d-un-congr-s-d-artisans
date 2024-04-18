@@ -1,0 +1,15 @@
+Affichage des informations relatives � ce personne : 
+Cin : 0
+Nom : ff
+Prenom : gg
+Num�ro de t�l�phone : 1
+Adresse mail : f
+Adresse de vie : g
+Nombre de langues : 1
+Les langues que ce personne maitrisent sont : 
+Langue 1 : g
+Role: g
+Tasks:
+- g
+Sessions:
+- Session: 4

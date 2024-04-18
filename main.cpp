@@ -117,14 +117,25 @@ int main() {
     cout<<"*************"<<endl;
     cout<<*s;
 */
-    Bijouterie *b;
+    /*Bijouterie *b;
     b=new Bijouterie();
     cin>>*b;
     cout<<*b;
     b->modifier();
     cout<<"*****************"<<endl;
-    cout<<*b;
-    return 0;
+    cout<<*b;*/
+    respensable *r;
+    r=new respensable();
+    cin>>*r;
+    r->enregistrer();
+
+   cout <<"****affichage de contenu de fichier****"<<endl ;
+    ifstream fichier ("respensableDB.txt",ios::app);
+       if (!fichier)
+        cout << "erreur"<<endl ;
+    char ch ;
+    while (fichier.get(ch))
+        cout <<ch;
 
 }
 
