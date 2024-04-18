@@ -11,13 +11,16 @@
 	<string>
 	<iostream>
 
-1713423931 source:c:\users\lenovo\desktop\projet c++ code blocks\projet\main.cpp
+1713435638 source:c:\users\lenovo\desktop\projet c++ code blocks\projet\main.cpp
 	"personne.h"
 	<iostream>
 	<vector>
 	<string>
 	"Respensable.h"
 	"Artisan.h"
+	"Broderie.h"
+	"Bijouterie.h"
+	"Sculpture.h"
 
 1713219200 source:c:\users\lenovo\desktop\projet c++ code blocks\projet\stand.cpp
 	"stand.h"
@@ -88,7 +91,7 @@
 	<string>
 	<iostream>
 
-1713303513 c:\users\lenovo\desktop\projet c++ code blocks\projet\bijouterie.h
+1713435392 c:\users\lenovo\desktop\projet c++ code blocks\projet\bijouterie.h
 	"Creation.h"
 	<vector>
 	<string>
@@ -107,7 +110,7 @@
 	"personne.h"
 	"Creation.h"
 
-1713303513 source:c:\users\lenovo\desktop\projet c++ code blocks\projet\bijouterie.cpp
+1713435684 source:c:\users\lenovo\desktop\projet c++ code blocks\projet\bijouterie.cpp
 	"Creation.h"
 	"Bijouterie.h"
 	<iostream>
@@ -121,12 +124,12 @@
 	<string>
 	<vector>
 
-1713303513 source:c:\users\lenovo\desktop\projet c++ code blocks\projet\creation.cpp
+1713433503 source:c:\users\lenovo\desktop\projet c++ code blocks\projet\creation.cpp
 	"Creation.h"
 	<iostream>
 	<vector>
 
-1713303513 source:c:\users\lenovo\desktop\projet c++ code blocks\projet\sculpture.cpp
+1713434263 source:c:\users\lenovo\desktop\projet c++ code blocks\projet\sculpture.cpp
 	"Creation.h"
 	<iostream>
 	<string>
@@ -143,7 +146,7 @@
 	<string>
 	<iostream>
 
-1713303513 source:c:\users\lenovo\desktop\projet c++ code blocks\projet\broderie.cpp
+1713434708 source:c:\users\lenovo\desktop\projet c++ code blocks\projet\broderie.cpp
 	"Creation.h"
 	<iostream>
 	<string>

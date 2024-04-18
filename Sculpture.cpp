@@ -100,10 +100,11 @@ istream& operator>>(istream& in, Sculpture& c )
     in>>nbMat;
     for(int i=0;i<nbMat;i++)
     {
-        string materiel;
+        string *materiel;
+        materiel=new string;
         cout<<"saisir le materiel numero : "<<i+1<<endl;
-        in>>materiel;
-        c.materiaux.push_back(&materiel);
+        in>>*(materiel);
+        c.materiaux.push_back(materiel);
     }
     return in;
 }

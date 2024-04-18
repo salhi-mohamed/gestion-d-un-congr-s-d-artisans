@@ -176,3 +176,28 @@ void Bijouterie::setPierresUtilises(vector<string*> pierresUtilises)
 {
     this->pierresUtilises = pierresUtilises;
 }
+istream& operator>>(std::istream &in,Bijouterie &b)
+{
+        cout<<endl<<"-------Saisir Bijouterie-----------"<<endl;
+    Creation*cr = &b;
+    in>>*cr;
+
+    cout<<"Saisir le type de metal : "<<endl;
+    in>>b.typeMetal;
+    cout<<"---Saisie des pièrres utilisees :--- "<<endl;
+    int nbPierres;
+    cout<<"Saisir le nombre des pièrres utilisees :  "<<endl;
+    in>>nbPierres;
+    for(unsigned int i=0;i<nbPierres;i++ )
+    {
+        string *pierre;
+        pierre=new string;
+        cout<<"Saisir la pierre numero : "<<i+1<<endl;
+        in>>*(pierre);
+        b. pierresUtilises.push_back(pierre);
+    }
+    return in;
+
+
+
+}

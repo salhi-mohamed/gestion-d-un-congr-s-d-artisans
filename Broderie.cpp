@@ -92,10 +92,11 @@ istream& operator>>(istream& in, Broderie& c )
     cin>>nbTissus;
     for(int i=0;i<nbTissus;i++)
     {
-        string tissus;
+       string *tissus=new string;;
+
         cout<<"saisir le tissus numero : "<<i+1<<endl;
-        in>>tissus;
-        c.tissusUtilises.push_back(&tissus);
+        in>>*(tissus);
+        c.tissusUtilises.push_back(tissus);
     }
     return in;
 }
