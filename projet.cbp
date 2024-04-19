@@ -46,6 +46,8 @@
 		<Unit filename="Sculpture.h" />
 		<Unit filename="evaluation.cpp" />
 		<Unit filename="evaluation.h" />
+		<Unit filename="functions.cpp" />
+		<Unit filename="functions.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="personne.cpp" />
 		<Unit filename="personne.h" />

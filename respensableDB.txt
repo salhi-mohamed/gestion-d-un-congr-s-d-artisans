@@ -1,15 +1,18 @@
 Affichage des informations relatives � ce personne : 
 Cin : 0
-Nom : ff
-Prenom : gg
-Num�ro de t�l�phone : 1
-Adresse mail : f
-Adresse de vie : g
-Nombre de langues : 1
+Nom : kk
+Prenom : l
+Num�ro de t�l�phone : 24
+Adresse mail : k
+Adresse de vie : k
+Nombre de langues : 3
 Les langues que ce personne maitrisent sont : 
-Langue 1 : g
-Role: g
+Langue 1 : t
+Langue 2 : hj
+Langue 3 : j
+Role: k
 Tasks:
-- g
+- gg
 Sessions:
-- Session: 4
+- Session: 2002
+- Session: 2003

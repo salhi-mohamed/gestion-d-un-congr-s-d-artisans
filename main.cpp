@@ -106,7 +106,13 @@ using namespace std;
 #include"Broderie.h"
 #include"Bijouterie.h"
 #include"Sculpture.h"
+#include<fstream>
+#include<string>
+//#include"functions.cpp"
+#include"functions.h"
 using namespace std;
+
+
 
 int main() {
     /*Broderie *s;
@@ -125,17 +131,9 @@ int main() {
     cout<<"*****************"<<endl;
     cout<<*b;*/
     respensable *r;
+    vider_fichier("respensableDB.txt");
     r=new respensable();
     cin>>*r;
     r->enregistrer();
-
-   cout <<"****affichage de contenu de fichier****"<<endl ;
-    ifstream fichier ("respensableDB.txt",ios::app);
-       if (!fichier)
-        cout << "erreur"<<endl ;
-    char ch ;
-    while (fichier.get(ch))
-        cout <<ch;
-
-}
-
+    cout<<"affichage fichier : "<<endl;
+    recuperer_fichier();}
