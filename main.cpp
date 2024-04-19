@@ -130,10 +130,17 @@ int main() {
     b->modifier();
     cout<<"*****************"<<endl;
     cout<<*b;*/
-    respensable *r;
+    /*respensable *r;
     vider_fichier("respensableDB.txt");
     r=new respensable();
     cin>>*r;
     r->enregistrer();
     cout<<"affichage fichier : "<<endl;
-    recuperer_fichier();}
+    recuperer_fichier();}*/
+    respensable *r;
+    r=new respensable();
+    cin>>*r;
+    r->modifier();
+    cout<<*r;
+    }
+

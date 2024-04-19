@@ -11,7 +11,7 @@
 	<string>
 	<iostream>
 
-1713515437 source:c:\users\lenovo\desktop\projet c++ code blocks\projet\main.cpp
+1713556972 source:c:\users\lenovo\desktop\projet c++ code blocks\projet\main.cpp
 	"personne.h"
 	<iostream>
 	<vector>
@@ -157,11 +157,12 @@
 	"Broderie.h"
 	<vector>
 
-1713515437 source:c:\users\lenovo\desktop\projet c++ code blocks\projet\functions.cpp
+1713518528 source:c:\users\lenovo\desktop\projet c++ code blocks\projet\functions.cpp
 	<fstream>
 	<string>
 	<iostream>
 	"functions.h"
 
-1713515437 c:\users\lenovo\desktop\projet c++ code blocks\projet\functions.h
+1713518218 c:\users\lenovo\desktop\projet c++ code blocks\projet\functions.h
+	<string>
 
